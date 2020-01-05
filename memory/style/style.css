@@ -1,0 +1,147 @@
+@import url("fonts.css");
+
+body {
+    font-family: 'Quicksand' !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.35rem;
+}
+
+#mainView {
+    margin-bottom: 100px
+}
+
+.footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: white
+}
+
+.bg-blue {
+    background-color: #142F56;
+}
+
+.text-yellow {
+    color: #FBBE00;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .img-fluid {
+        max-width: 80%;
+    }
+}
+
+.borders {
+    color: #142F56;
+    border-width: 2px;
+    border-style: solid
+}
+
+.active-border {
+    color: #FBBE00;
+    border-width: 2px;
+    border-style: solid
+}
+
+.win-border {
+    color: #0097C2;
+    border-width: 2px;
+    border-style: solid
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.text-black {
+    color: black;
+    font-weight: 400
+}
+
+.alert-my {
+    background-color: #FBBE00;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.alert {
+    margin: auto;
+    margin-top: 10vh;
+    border-color: #b48802;
+    max-width: 100%;
+}
+
+.statistic,
+.information {
+    font-size: 1.25rem;
+}
+
+.modal-background {
+    background-color: transparent;
+    border: none;
+}
+
+.form-check-input {
+    top: 5px;
+}
+
+.icon {
+    margin-top: -5px;
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.cookes-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-height: 50px;
+    text-align: center;
+    z-index: 999;
+    font-size: 1rem;
+    color: #FFF;
+    background-color: #E94720;
+
+}
+
+.cookes-text {
+    text-align: center;
+    font-size: 1rem;
+    color: #FFF;
+}
+
+.cookes-close {
+    text-align: right;
+}
+
+#preload {
+    width: 0px;
+    height: 0px;
+}
+
+.dropdown-item:hover {
+    background-color: #142F56;
+    color: #FFF !important;
+}
+
+button.navbar-toggler {
+    border-color: #FFF;
+    border-width: 2px;
+}
+
+span.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/*
+.Copie-de-color19-1-hex { color: #0097C2; }
+.Copie-de-color19-2-hex { color: #FFFFFF; }
+.Copie-de-color19-3-hex { color: #E94720; }
+.Copie-de-color19-4-hex { color: #FBBE00; }
+.Copie-de-color19-5-hex { color: #142F56; } */
