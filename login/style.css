@@ -1,0 +1,162 @@
+html{
+    height: 100%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #003459;
+    background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 84%, rgba(2,0,36,1) 100%); 
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #00171f;
+    text-align: center;
+    min-width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+
+form {
+    width: 100%;
+}
+
+.container h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin: 40px 0px;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 24px;
+    padding: 14px 10px;
+    width: 50%;
+    color: white;
+    transition: 0.25s;
+}
+
+.container input[type="text"]:focus,
+.container input[type="password"]:focus {
+    width: 90%;
+    border-color: #ff9f1c;
+}
+
+.container input[type="submit"] {
+    max-width: 30%;
+    background: none;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 24px;
+    padding: 14px 10px;
+    width: 50%;
+    color: white;
+    transition: 0.25s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container input[type="submit"]:hover {
+    background: none;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    border-color: #ff9f1c;
+    background: #ff9f1c;
+    color: black;
+    
+}
+
+.container div span {
+    display: block;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.container div span:hover{
+    color: #ff9f1c;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+@media (max-width: 576px) {
+    .container {
+        min-width: 100vw;
+        min-height: 100vh;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%,0%);
+        border-radius: 0px;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+        width: 60%;
+    }
+
+    .container input[type="submit"] {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .container {
+        border: none;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+        width: 60%;
+    }
+
+    .container input[type="submit"] {
+        max-width: 40%;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .container {
+        max-width: 400px;
+        max-height: 600px;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+        width: 60%;
+    }
+
+    .container input[type="submit"] {
+        max-width: 40%;
+    }
+}
+
+@media (max-height: 500px){
+    .container {
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%,0%);
+    }
+}
