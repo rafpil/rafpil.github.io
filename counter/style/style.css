@@ -1,0 +1,206 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-attachment: fixed;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: cover;
+}
+
+#mainView {
+    background-color: rgba(0, 174, 243, 0.7);
+    background-size: cover;
+    min-height: 50%;
+    min-width: 85%
+}
+
+.form-control {
+    max-width: 80%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.no-display {
+    display: none;
+}
+
+/* Button */
+
+button,
+.btn {
+    margin: 50px 0px 20px 0px;
+    background-color: rgba(255, 204, 0, 1);
+    color: black
+}
+
+.btn:hover {
+    background-color: rgba(255, 149, 0, 1);
+    color: black
+}
+
+/* Table */
+
+table {
+    overflow-x: auto;
+    border: 3px;
+    border-style: double;
+    color: black !important;
+}
+
+#tableView {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+thead th {
+    vertical-align: middle !important;
+    text-align: center !important;
+    border: 1px;
+    border-style: solid !important;
+    border-color: black !important;
+    text-transform: uppercase;
+}
+
+tbody tr:first-child,
+tfoot tr {
+    border-top: 4px;
+    border-top-style: double;
+}
+
+tbody td,
+tfoot td {
+    vertical-align: middle !important;
+    text-align: center;
+    border: 1px;
+    border-style: solid !important;
+    max-width: 10px;
+    min-width: 10px;
+    padding: 10 !important;
+    word-break: break-all;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+td {
+    position: relative;
+}
+
+.table-row {
+    background-color: rgba(255, 149, 0, 1);
+}
+
+/* Icon in table */
+
+#tBig .fa-trash-o {
+    left: -20px;
+    top: calc(50% - 10px);
+    position: absolute;
+    font-size: 20px;
+    color: black;
+}
+
+#tSmall .fa-trash-o {
+    font-size: 20px;
+    color: black;
+}
+
+#tBig .fa-trash-o:hover,
+#tSmall .fa-trash-o:hover {
+    color: red;
+}
+
+/* Alert */
+
+.alert-position {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: 7px;
+}
+
+/* Input */
+
+#roadName,
+#startVal,
+#stopVal {
+    width: 100%;
+    max-width: 300px;
+}
+
+.inputText {
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    margin: 5px;
+}
+
+input[type="text"] {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Hide placeholder */
+
+input:focus::-webkit-input-placeholder {
+    color: transparent !important;
+}
+
+input:focus::-moz-placeholder {
+    color: transparent !important;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent !important;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder {
+    text-align: center;
+}
+
+::-moz-placeholder {
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    text-align: center;
+}
+
+/* Valid */
+
+.valid {
+    border-color: rgba(255, 59, 48, 1);
+}
+
+.valid:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: rgba(255, 59, 48, 1);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 59, 48, 0.75);
+}
+
+/* @media */
+
+@media screen and (max-width: 1000px) {
+    .tBig {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .tSmall {
+        display: none;
+    }
+}

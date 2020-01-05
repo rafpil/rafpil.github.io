@@ -1,0 +1,139 @@
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Licznik kilometrów</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style/font-awesome.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body onload="main = new main();">
+  <div class="container my-4" id="mainView">
+
+    <!-- Form  -->
+
+    <div class="container-fluid m-0 p-0">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <form id="form">
+            <div class="form">
+              <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 inputText text-center">
+                <label for="roadName">Oznaczenie drogi</label>
+                <input id="roadName" type="text" placeholder="np. DW 551" class="form-control form-control-lg" required>
+              </div>
+              <div class="form-row justify-content-center">
+                <div class="form-group col-12 col-sm-6 col-md-5 col-lg-5 col-xl-4 justify-content-center inputText">
+                  <label for="startVal">Początek</label>
+                  <input id="startVal" type="text" class="form-control form-control-lg"
+                    placeholder="np. 1,300 lub 1+300" required>
+                </div>
+                <div class="form-group col-12 col-sm-6 col-md-5 col-lg-5 col-xl-4 justify-content-center inputText">
+                  <label for="stopVal">Koniec</label>
+                  <input id="stopVal" type="text" class="form-control form-control-lg" placeholder="np. 5,500 lub 5+500"
+                    required>
+                </div>
+              </div>
+              <div class="contariner">
+                <div class="row justify-content-center">
+                  <div class="offset-md-4 offset-lg-4 offset-xl-4 col-10 col-sm-8 col-md-4 col-lg-4 col-xl-4">
+                    <button id="addButton" type="submit" class="btn btn-primary btn-lg btn-block"
+                      onclick="main.addRow()">Dodaj do tabeli
+                    </button>
+                  </div>
+                  <div class="text-center col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <button id="generatePDF" class="btn btn-primary btn-lg"
+                      onclick="new PDF().exportToPDF(main.data, main.sum)">Export do pliku PDF</button>
+                  </div>
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table -->
+
+    <div class="container-fluid m-0 p-0">
+      <div class="row mx-auto">
+        <div id="startInfo" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="alert alert-warning text-center" role="alert">
+            <strong>Brak danych do wyświetlenia!</strong><br><br>
+            Uzupełnij powyższy formularz, a następnie kliknij przycisk "Dodaj do tabeli".
+          </div>
+        </div>
+
+        <div id="tableView" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+          <!-- Tabel to big screen -->
+
+          <table id="tBig" class="table tBig hidden">
+            <thead>
+              <tr>
+                <th rowspan="2" scope="colgroup">Droga</th>
+                <th colspan="10" scope="colgroup">Hektometry</th>
+                <th colspan="10" scope="colgroup">Kilometry</th>
+              </tr>
+
+              <tr>
+                <th scope="col">0</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th>
+                <th scope="col">6</th>
+                <th scope="col">7</th>
+                <th scope="col">8</th>
+                <th scope="col">9</th>
+                <th scope="col">0</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th>
+                <th scope="col">6</th>
+                <th scope="col">7</th>
+                <th scope="col">8</th>
+                <th scope="col">9</th>
+              </tr>
+
+            </thead>
+            <tbody id="tBodyBig">
+            </tbody>
+            <tfoot id="tFootBig"></tfoot>
+          </table>
+
+          <!-- table small -->
+          <div id="tSmall" class="table tSmall"></div>
+          <div id="tSumSmall" class="table tSmall"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert -->
+
+  <div id="alerts" class="alert-position"></div>
+
+
+  <!-- Script -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.57/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.57/vfs_fonts.js"></script>
+
+  <script src="script/conventer.js"></script>
+  <script src="script/addEventListener.js"></script>
+  <script src="script/generatePDF.js"></script>
+  <script src="script/main.js"></script>
+  <script src="script/alert.js"></script>
+  <script src="script/counter.js"></script>
+  <script src="script/rowDate.js"></script>
+  <script src="script/validation.js"></script>
+
+</body>
+
+</html>
