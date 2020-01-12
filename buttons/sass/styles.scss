@@ -1,0 +1,158 @@
+$blue: #0575E6;
+
+body {
+    height: 100vh;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.container__row {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    position: relative;
+    width: 10rem;
+    height: 4rem;
+    margin: 1rem;
+    background: none;
+    border-style: solid;
+    border-radius: 2rem;  
+    font-weight: 700;
+
+    transition: color .5s;
+
+    &.btn__black {
+        border-color: black;
+        color: black;
+    }
+
+    &.btn__color {
+        border-color: $blue;
+        color: $blue;
+    }
+
+    &.btn__first::before {
+        content: "";
+        width: 0%;
+        height: 101%;
+        position: absolute;
+        top: -1%;
+        left: 50%;
+
+        border-color: black;
+        border-radius: 2rem;
+
+        z-index: -1;
+
+        transition-property: width, left;
+        transition-duration: .5s, .5s;
+    }
+
+    &.btn__first-black::before {
+        background: black;
+        border-color: black;
+    }
+
+    &.btn__first-blue::before {
+        background: $blue;
+        border-color: $blue;
+    }
+
+
+    &.btn__first:hover {
+        color: white;
+    }
+
+    &.btn__first:hover::before {
+        width: 103%;
+        left: -1%;
+    }
+
+    &.btn__second::before {
+        content: "";
+        width: 103%;
+        height: 0%;
+        position: absolute;
+        top: 50%;
+        left: -1%;
+        border-radius: 2rem;
+
+        z-index: -1;
+
+        transition-property: height, top;
+        transition-duration: .5s, .5s;
+
+    }
+
+    &.btn__second-black::before {
+        background: black;
+        border-color: black;
+    }
+
+    &.btn__second-blue::before {
+        background: $blue;
+        border-color: $blue;
+    }
+
+    &.btn__second:hover {
+        color: white;
+    }
+
+    &.btn__second:hover::before {
+        height: 101%;
+        top: -1%;
+    }
+
+    &.btn__third::before {
+        content: "";
+        background: black;
+        width: 0%;
+        height: 0%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        border-color: black;
+        border-radius: 2rem;
+
+        z-index: -1;
+
+        transition-property: width, height;
+        transition-duration: .5s, .5s;
+    }
+
+    &.btn__third-black::before {
+        background: black;
+        border-color: black;
+    }
+
+    &.btn__third-blue::before {
+        background: $blue;
+        border-color: $blue;
+    }
+
+    &.btn__third:hover {
+        color: white;
+    }
+
+    &.btn__third:hover::before {
+        width: 104%;
+        height: 102%;
+    }
+}
