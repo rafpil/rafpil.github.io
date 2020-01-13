@@ -51,65 +51,63 @@ button::-moz-focus-inner {
   margin: 1rem;
   background: none;
   border-style: solid;
-  border-radius: 2rem;
   font-weight: 700;
+  overflow: hidden;
   -webkit-transition: color .5s;
   transition: color .5s; }
-  .btn.btn__black {
+  .btn.btn--black {
     border-color: black;
     color: black; }
-  .btn.btn__color {
+  .btn.btn--blue {
     border-color: #0575E6;
     color: #0575E6; }
   .btn.btn__first::before {
     content: "";
     width: 0%;
-    height: 101%;
+    height: 100%;
     position: absolute;
-    top: -1%;
+    top: 0;
     left: 50%;
     border-color: black;
-    border-radius: 2rem;
     z-index: -1;
     -webkit-transition-property: width, left;
     transition-property: width, left;
     -webkit-transition-duration: .5s, .5s;
             transition-duration: .5s, .5s; }
-  .btn.btn__first-black::before {
+  .btn.btn__first--black::before {
     background: black;
     border-color: black; }
-  .btn.btn__first-blue::before {
+  .btn.btn__first--blue::before {
     background: #0575E6;
     border-color: #0575E6; }
   .btn.btn__first:hover {
     color: white; }
   .btn.btn__first:hover::before {
-    width: 103%;
-    left: -1%; }
+    width: 100%;
+    left: 0%; }
   .btn.btn__second::before {
     content: "";
-    width: 103%;
+    width: 100%;
     height: 0%;
     position: absolute;
     top: 50%;
-    left: -1%;
-    border-radius: 2rem;
+    left: 0;
     z-index: -1;
     -webkit-transition-property: height, top;
     transition-property: height, top;
     -webkit-transition-duration: .5s, .5s;
             transition-duration: .5s, .5s; }
-  .btn.btn__second-black::before {
+  .btn.btn__second--black::before {
     background: black;
     border-color: black; }
-  .btn.btn__second-blue::before {
+  .btn.btn__second--blue::before {
     background: #0575E6;
     border-color: #0575E6; }
   .btn.btn__second:hover {
     color: white; }
   .btn.btn__second:hover::before {
-    height: 101%;
-    top: -1%; }
+    height: 100%;
+    top: 0; }
   .btn.btn__third::before {
     content: "";
     background: black;
@@ -122,22 +120,21 @@ button::-moz-focus-inner {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     border-color: black;
-    border-radius: 2rem;
     z-index: -1;
     -webkit-transition-property: width, height;
     transition-property: width, height;
     -webkit-transition-duration: .5s, .5s;
             transition-duration: .5s, .5s; }
-  .btn.btn__third-black::before {
+  .btn.btn__third--black::before {
     background: black;
     border-color: black; }
-  .btn.btn__third-blue::before {
+  .btn.btn__third--blue::before {
     background: #0575E6;
     border-color: #0575E6; }
   .btn.btn__third:hover {
     color: white; }
   .btn.btn__third:hover::before {
-    width: 104%;
-    height: 102%; }
+    width: 100%;
+    height: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
