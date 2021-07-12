@@ -1,0 +1,2 @@
+(self.webpackChunkbmr_webpage=self.webpackChunkbmr_webpage||[]).push([[617],{9863:function(e,t,n){"use strict";n.r(t);var a=n(7294),l=n(5444),c=n(5127),r=n(3751);t.default=function(){return a.createElement(c.Z,null,a.createElement(r.Z,{title:"Page two"}),a.createElement("h1",null,"Hi from the second page"),a.createElement("p",null,"Welcome to page 2"),a.createElement("button",{className:"btn btn-danger"},"=="),a.createElement(l.Link,{to:"/"},"Go back to the homepage"))}}}]);
+//# sourceMappingURL=component---src-pages-page-2-js-e90aec19a5b096c8b16b.js.map
